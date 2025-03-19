@@ -132,6 +132,7 @@ ping google.com
 On télécharger une image vulnérable et on l’analyse avec Trivy :
 
 docker pull vulnerables/web-dvwa
+
 trivy image vulnerables/web-dvwa
 
 On fait un scan et on sauvegarde le résultat en json
