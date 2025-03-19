@@ -1,11 +1,11 @@
-## Compte rendu  | Session 1 : Introduction aux Containers et à la Sécurité
+# Compte rendu  | Session 1 : Introduction aux Containers et à la Sécurité
 
-# Objectifs
+## Objectifs
 
 Comprendre le fonctionnement des containers et leurs différences avec les machines virtuelles.
 Identifier les enjeux de sécurité liés aux containers.
 
-# Activités Pratiques
+## Activités Pratiques
 
 1) Container de test  :
 
@@ -48,14 +48,14 @@ docker run --rm --cap-add=SYS_ADMIN alpine sh -c 'cat /proc/self/status'
 
 ![Capture d'écran 2025-03-19 151849](https://github.com/user-attachments/assets/9fb3c95a-cc40-43f2-8776-08cff01182d3)
 
-# Vulnérabilités et Menaces
+## Vulnérabilités et Menaces
 
-# Objectifs
+## Objectifs
 
 Identifier les vulnérabilités courantes dans un environnement conteneurisé.
 Comprendre comment les attaquants exploitent ces failles.
 
-# Activités Pratiques
+## Activités Pratiques
 
 1) Tester un Container avec des Permissions Élevées
 
@@ -165,12 +165,12 @@ Grype et Trivy sont deux scanners de vulnérabilités pour les images Docker, ma
 Grype est plus précis sur les vulnérabilités OS, alors que Trivy fournit une couverture plus large incluant les applications.
 
 
-# Étude de Cas : Attaque par Élévation de Privilège
+## Étude de Cas : Attaque par Élévation de Privilège
 
 Un attaquant exploite une faille dans un container mal configuré.
 Il parvient à exécuter du code sur l’hôte et récupérer la sauvegarde d'une base de données qui contient des données bancaires.
 
-# Quelles mesures auraient pu empêcher cette attaque ?
+## Quelles mesures auraient pu empêcher cette attaque ?
 
 
 Cette attaque aurait pu être évitée en appliquant des mesures de sécurité de base lors de la configuration du conteneur. Par exemple, il ne faut pas utiliser --privileged, car cela donne trop de droits au conteneur sur l’hôte. De plus, exécuter le conteneur avec un utilisateur non-root permet de limiter les dégâts en cas d’exploitation. Il aurait aussi été important de restreindre l’accès aux fichiers sensibles en évitant de monter des volumes critiques de l’hôte. Enfin, en analysant l’image avec Trivy ou Grype, il aurait été possible de détecter des vulnérabilités connues avant son exécution.
