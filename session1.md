@@ -1,13 +1,11 @@
-## Compte rendu Session 1
+## Compte rendu  | Session 1 : Introduction aux Containers et à la Sécurité
 
-# Session 1 : Introduction aux Containers et à la Sécurité
-
-Objectifs
+# Objectifs
 
 Comprendre le fonctionnement des containers et leurs différences avec les machines virtuelles.
 Identifier les enjeux de sécurité liés aux containers.
 
-Activités Pratiques
+# Activités Pratiques
 
 Après l'installation de Docker, on a executé un container de test  
 
