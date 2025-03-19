@@ -3,6 +3,7 @@
 ## Objectifs
 
 Comprendre le fonctionnement des containers et leurs différences avec les machines virtuelles.
+
 Identifier les enjeux de sécurité liés aux containers.
 
 ## Activités Pratiques
@@ -105,7 +106,7 @@ docker network disconnect bridge mon-container
 
 On veut bloquer la connexion internet au secure-container créé précédemment 
 
-Le secure container était dans les images sur Docker Desktop et n'était reconu dans la commande pour le déconnecter
+Le secure container était dans les images sur Docker Desktop et n'était pas reconu dans la commande pour le déconnecter
 
 Il a fallu qu'on le fasse tourner avec la commande suivante : 
 
@@ -129,7 +130,7 @@ ping google.com
 
 7) Télécharger et Scanner une Image
 
-On télécharger une image vulnérable et on l’analyse avec Trivy :
+On télécharge une image vulnérable et on l’analyse avec Trivy :
 
 docker pull vulnerables/web-dvwa
 
@@ -142,7 +143,9 @@ On fait un scan et on sauvegarde le résultat en json
 Rapide résumé des vulnérabilités de cette image : 
 
 Trivy détecte des failles critiques dans les dépendances et le système.
+
 L’image web-dvwa contient des packages obsolètes avec des vulnérabilités d’élévation de privilège et d’exécution de code à distance.
+
 Certaines failles sont exploitables via le navigateur ou des services exposés.
 
 8) Scanner une Image pour Détecter les Vulnérabilités
