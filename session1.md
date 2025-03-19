@@ -1,2 +1,2 @@
-##Compte rendu Session 1##
+##Compte rendu Session 1
 
