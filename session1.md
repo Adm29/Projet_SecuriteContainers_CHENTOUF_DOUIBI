@@ -120,7 +120,7 @@ mais ca ne marchait pas donc on a mis son ID :
 
 docker network disconnect bridge 711f62910213
 
-On a vu qu'il était bien déconnecté puis on a créé un shell et on a testé le ping car en dehors du shell cela ne marchait pas : 
+On a vu qu'il était bien déconnecté puis on a créé un shell à l'intérieur duquel on a testé le ping car en dehors du shell nous n'obtenions pas le résultat attendu : 
 
 docker exec -it 711f62910213 sh
 
