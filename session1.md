@@ -2,7 +2,7 @@
 
 ## Objectifs
 
-Dans ce rapport de TP, on cherche à comprendre le fonctionnement des containers et leurs différences avec les machines virtuelles et à identifier les enjeux de sécurité liés aux containers.
+Dans cette session, on cherche à comprendre le fonctionnement des containers et leurs différences avec les machines virtuelles et à identifier les enjeux de sécurité liés aux containers.
 
 ## Activités Pratiques
 
