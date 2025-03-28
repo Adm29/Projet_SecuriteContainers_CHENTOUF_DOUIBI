@@ -2,13 +2,11 @@
 
 ## Objectifs
 
-Comprendre le fonctionnement des containers et leurs différences avec les machines virtuelles.
-
-Identifier les enjeux de sécurité liés aux containers.
+Dans ce rapport de TP, on cherche à comprendre le fonctionnement des containers et leurs différences avec les machines virtuelles et à identifier les enjeux de sécurité liés aux containers.
 
 ## Activités Pratiques
 
-1) Container de test  :
+1) On commence par un container de test  :
 
   docker run --rm hello-world
 
@@ -53,8 +51,7 @@ docker run --rm --cap-add=SYS_ADMIN alpine sh -c 'cat /proc/self/status'
 
 ## Objectifs
 
-Identifier les vulnérabilités courantes dans un environnement conteneurisé.
-Comprendre comment les attaquants exploitent ces failles.
+Dans cette partie, on cherche donc à identifier les vulnérabilités courantes dans un environnement conteneurisé et comprendre comment les attaquants exploitent ces failles.
 
 ## Activités Pratiques
 
@@ -104,9 +101,9 @@ docker network disconnect bridge mon-container
 
 ![image](https://github.com/user-attachments/assets/b303b9cb-2d1a-4cad-afb4-b8b422482792)
 
-On veut bloquer la connexion internet au secure-container créé précédemment 
+On veut bloquer la connexion internet au secure-container créé précédemment.
 
-Le secure container était dans les images sur Docker Desktop et n'était pas reconu dans la commande pour le déconnecter
+Le secure container était dans les images sur Docker Desktop et n'était pas reconu dans la commande pour le déconnecter.
 
 Il a fallu qu'on le fasse tourner avec la commande suivante : 
 
@@ -116,7 +113,7 @@ Après on a retesté la commande suivante :
 
 docker network disconnect bridge secure-container 
 
-mais ca ne marchait pas donc on a mis son ID : 
+Cependant ca ne marchait pas donc on a mis son ID : 
 
 docker network disconnect bridge 711f62910213
 
